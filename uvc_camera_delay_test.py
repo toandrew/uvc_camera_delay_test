@@ -24,7 +24,7 @@ num = 0
 while(1):
     ret, frame = cap.read()
 
-    num++
+    num = num + 1
     if num >= 10:
       num = 0
       file_name = './pics/' + str(round(time.time() * 1000)) + '.jpg'
@@ -35,6 +35,6 @@ while(1):
     # to show
     #cv2.imshow("capture", frame)
     #if cv2.waitKey(1) & 0xFF == ord('q'):
-    #break
+     # break
 cap.release()
-#cv2.destroyAllWindows()
+cv2.destroyAllWindows()
